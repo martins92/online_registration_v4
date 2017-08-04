@@ -1,0 +1,70 @@
+/* =================================
+  Base Element Styles
+==================================== */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Playfair Display', 'Roboto Slab', 'PT Serif', serif;
+	background-image: url('../img/coffee_background.jpg');        								/*##### Background image for the 320px width #####*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: #fff;
+	margin: 0;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+input {
+	border: none;
+	width: 100%;
+}
+
+select {
+	width: 100%;
+}
+
+input,
+select {
+	padding: 12.5px 6px;
+	border-radius: 3.25px;
+	height: auto;
+	font-size: 1.3em;
+}
+
+input[required] {
+	font-style: italic;
+	text-align: right;
+}
+
+[required]:target {
+	font-style: normal;
+	text-align: left;
+}
+/* =================================
+  Base Layout Styles
+==================================== */
+
+/* ---- Header ---- */
+
+
+
+/* ---- Form ---- */
+
+.margin {
+	margin: auto 14.8px;
+}
+
+/* ---- Footer ---- */
+
+
+
+/* =================================
+  Media Queries
+==================================== */
