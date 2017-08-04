@@ -6,12 +6,18 @@
 }
 
 body {
-	font-family: 'Playfair Display', 'Roboto Slab', 'PT Serif', serif;
+	font-family: 'Roboto Slab', 'Playfair Display', 'PT Serif', serif;
 	background-image: url('../img/coffee_background.jpg');        								/*##### Background image for the 320px width #####*/
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	color: #fff;
+	margin: 0;
+}
+
+h1,
+h2,
+p {
 	margin: 0;
 }
 
@@ -28,37 +34,107 @@ input {
 
 select {
 	width: 100%;
+	color: #7c7c7c;
 }
 
-input,
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
 select {
-	padding: 12.5px 6px;
+	padding: 12.5px 15px;
 	border-radius: 3.25px;
 	height: auto;
-	font-size: 1.3em;
+	font-size: 1em;
+	display: block;
 }
 
-input[required] {
+input[type="checkbox"],                                                         /*##### CHECKBOX styling #####*/
+input[type="radio"] {
+	display: none;
+}
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+	padding-bottom: 19.5px;
+	display: inline-block;
+}
+
+
+legend {
+	padding: 28.5px 0;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+#zip_code {
+	width: 50%;
+}
+
+::placeholder {
 	font-style: italic;
 	text-align: right;
+	font-family: 'Roboto Slab', 'Playfair Display', 'PT Serif', serif;
+	font-size: .65em;
+	color: #7c7c7c;
 }
 
-[required]:target {
-	font-style: normal;
-	text-align: left;
-}
 /* =================================
   Base Layout Styles
 ==================================== */
 
 /* ---- Header ---- */
+.h1 {
+	padding: 26.5px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.375em;
+	font-weight: normal;
+}
 
+.h2 {
+	padding-top: 26.5px;
+	padding-bottom: 17.5px;
+	text-align: center;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.p {
+	padding-bottom: 40px;
+	text-align: center;
+	font-weight: normal;
+	color: #ededed;
+}
 
 
 /* ---- Form ---- */
 
 .margin {
 	margin: auto 14.8px;
+}
+
+.padding {
+	padding-top: 20px;
+	padding-bottom: 14px;
+	display: block;
+}
+
+.padding2 {
+	padding-bottom: 31px;
+	display: block;
+}
+
+.padding3 {
+	padding-top: 34px;
+	padding-bottom: 19px;
 }
 
 /* ---- Footer ---- */

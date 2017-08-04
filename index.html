@@ -6,41 +6,42 @@
     <title>Online Registration | Martins Ratkus</title>
     <link type="text/css" rel="stylesheet" href="css/base.css">
     <link type="text/css" rel="stylesheet" href="css/flexbox.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif%7CPlayfair+Display%7CRoboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif%7CPlayfair+Display%7CRoboto+Slab:100,400" rel="stylesheet">
   </head>
   <body>
     <header>                                                                    <!--##### Header section ##### -->
       <section class="margin">
-        <h1>The Code Review</h1>
+        <h1 class="h1">The Code Review</h1>
       </section>
       <section class="margin">
-        <h2>Sign up for our newsletter</h2>
-        <p>Get the latest on how your code is doing right in your inbox</p>
+        <h2 class="h2">Sign up for our newsletter</h2>
+        <p class="p">Get the latest on how your code is doing right in your inbox</p>
       </section>
     </header>
 
     <form action="index.html" method="post">
-      <fieldset class="margin">                                                       <!--##### Contact Information ##### -->
+      <fieldset class="margin">                                                 <!--##### Contact Information ##### -->
         <legend>Contact Information</legend>
 
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="full_name" placeholder="required" required>
+        <label class="padding" for="name">Full Name</label>
+        <input type="text" id="name" name="full_name" placeholder="Required" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Required'" required>
 
-        <label for="e_mail">Email Address</label>
-        <input type="email" id="e_mail" name="email" placeholder="required" required>
+        <label class="padding" for="e_mail">Email Address</label>
+        <input type="email" id="e_mail" name="email" placeholder="Required" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Required'" required>
 
-        <label for="phone">Phone Number</label>
+        <label class="padding" for="phone">Phone Number</label>
         <input type="tel" id="phone" name="phone_number">
 
-        <label for="street">Street Address</label>
+        <label class="padding" for="street">Street Address</label>
         <input type="text" id="street" name="">
 
-        <label for="city">City</label>
+        <label class="padding" for="city">City</label>
         <input type="text" id="city" name="city_name">
 
-        <label for="state">State</label>
+        <label class="padding" for="state">State</label>
         <select id="state" name="state_select">
-          <optgroup label="States of USA">                                      <!--##### State <option> snippet from https://www.freeformatter.com/usa-state-list-html-select.html ##### -->
+          <optgroup label="States of USA">
+            <option value="AL">Choose State</option>                            <!--##### State <option> snippet from https://www.freeformatter.com/usa-state-list-html-select.html ##### -->
             <option value="AL">Alabama</option>
           	<option value="AK">Alaska</option>
           	<option value="AZ">Arizona</option>
@@ -95,13 +96,13 @@
           </optgroup>
         </select>
 
-        <label for="zip_code">Zip Code</label>
+        <label class="padding" for="zip_code">Zip Code</label>
         <input type="text" id="zip_code" name="zip">
       </fieldset>
 
-      <fieldset class="margin">                                                        <!--##### Newsletter ##### -->
+      <fieldset class="margin">                                                 <!--##### Newsletter ##### -->
         <legend>Newsletter</legend>
-        <label>Select the newsletters you would like to recieve</label>
+        <label class="padding2">Select the newsletters you would like to recieve</label>
         <input type="checkbox" id="html" name="html_news" value="html">
         <label for="html">HTML news</label><br>
 
@@ -111,14 +112,14 @@
         <input type="checkbox" id="js" name="js_news" value="js">
         <label for="js">Javascript news</label>
 
-        <label>Newsletter format</label>
+        <label class="padding2">Newsletter format</label>
         <input type="radio" id="html_format" name="news_format" value="html_format">
         <label for="html_format">HTML</label><br>
 
         <input type="radio" id="text_format" name="news_format" value="text_format">
         <label for="text_format">Plain text</label>
 
-        <label>Other topics you'd like to hear about</label>
+        <label class="padding">Other topics you'd like to hear about</label>
         <textarea id="text_area" name="name" placeholder="Your interests"></textarea>
 
         <button type="button" name="button">Sign Up</button>
