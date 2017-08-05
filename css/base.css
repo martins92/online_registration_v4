@@ -11,7 +11,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	color: #fff;
+	color: #fff;                                                                  /*##### Color #544337 #####*/
 	margin: 0;
 }
 
@@ -27,46 +27,24 @@ fieldset {
 	border: none;
 }
 
-input {
+form {
+	max-width: 500px;
+	margin: auto;
+}
+
+input,
+textarea {
 	border: none;
 	width: 100%;
+	font-family: 'Roboto Slab', serif;
+	opacity: 0.6;
 }
 
 select {
 	width: 100%;
 	color: #7c7c7c;
+	opacity: 0.6;
 }
-
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-textarea,
-select {
-	padding: 12.5px 15px;
-	border-radius: 3.25px;
-	height: auto;
-	font-size: 1em;
-	display: block;
-}
-
-input[type="checkbox"],                                                         /*##### CHECKBOX styling #####*/
-input[type="radio"] {
-	display: none;
-}
-
-input[type="checkbox"]+label,
-input[type="radio"]+label {
-	padding-bottom: 19.5px;
-	display: inline-block;
-}
-
 
 legend {
 	padding: 28.5px 0;
@@ -74,15 +52,31 @@ legend {
 	font-weight: bold;
 }
 
+textarea {
+	height: 100px;
+	border-radius: 3.25px;
+	resize: none;
+	padding: 12.5px 15px;
+	font-size: 1em;
+}
+
 #zip_code {
 	width: 50%;
 }
 
-::placeholder {
+[placeholder="Required"]::placeholder {
 	font-style: italic;
 	text-align: right;
 	font-family: 'Roboto Slab', 'Playfair Display', 'PT Serif', serif;
 	font-size: .65em;
+	color: #7c7c7c;
+}
+
+[placeholder="Your interests"]::placeholder {
+	font-style: italic;
+	text-align: center;
+	font-family: 'Roboto Slab', 'Playfair Display', 'PT Serif', serif;
+	font-size: 1em;
 	color: #7c7c7c;
 }
 
@@ -121,10 +115,15 @@ legend {
 	margin: auto 14.8px;
 }
 
+.pad {
+	padding-bottom: 37.5px;
+}
+
 .padding {
 	padding-top: 20px;
 	padding-bottom: 14px;
 	display: block;
+	font-size: 14px;
 }
 
 .padding2 {
@@ -137,6 +136,92 @@ legend {
 	padding-bottom: 19px;
 }
 
+input:focus {
+	outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+select {
+	padding: 12.5px 15px;
+	border-radius: 3.25px;
+	height: auto;
+	font-size: 1em;
+	display: block;
+}
+
+input[type="checkbox"],                                                         /*##### CHECKBOX styling general#####*/
+input[type="radio"] {
+	opacity: 0;
+	width: 0;
+	margin: 0;
+}
+
+input[type="checkbox"]+label,
+input[type="radio"]+label {
+	margin-bottom: 19.5px;
+	padding-left: 26px;
+	display: inline-block;
+}
+
+label[for="html"],																															/*##### CHECKBOX #####*/
+label[for="css"],
+label[for="js"] {
+	display: inline-block;
+	padding-left: 26px;
+	background: url("../img/sprite_15x15px.png") no-repeat;
+	background-position: -37px -51px;
+	line-height: 16px;
+	cursor: pointer;
+}
+
+input:checked + label[for="html"],
+input:checked + label[for="css"],
+input:checked + label[for="js"] {
+	background-position: -37px -78px;
+}
+
+label[for="html_format"],																												/*##### RADIO BUTTON #####*/
+label[for="text_format"] {
+	display: inline-block;
+	padding-left: 26px;
+	background: url("../img/sprite_15x15px.png") no-repeat;
+	background-position: -37px -106px;
+	line-height: 16px;
+	cursor: pointer;
+}
+
+input:checked + label[for="html_format"],
+input:checked + label[for="text_format"] {
+	background-position: -37px -134px;
+}
+
+.sign_up {																																			/*##### SIGN UP BUTTON #####*/
+	width: 100%;
+	border: 0;
+	display: inline-block;
+	border-radius: 3.25px;
+	background: #fe9a58;
+	height: 60px;
+	color: #fff;
+	font-family: 'Roboto Slab';
+	font-size: 1.15em
+}
+
+input[type="button"]:active
+
+input[type="button"]:focus {
+	
+}
+
 /* ---- Footer ---- */
 
 
@@ -144,3 +229,7 @@ legend {
 /* =================================
   Media Queries
 ==================================== */
+
+@media (min-width: 768px) {
+
+}
