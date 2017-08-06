@@ -63,7 +63,7 @@ textarea {
 	outline: none;
 }
 
-#zip_code {
+.zip_code {
 	width: 50%;
 }
 
@@ -241,7 +241,7 @@ input:checked + label[for="text_format"] {
 
 /* ---- Footer ---- */
 
-.margin_f {
+.margin_f_2 {
 	margin-top: 13.5px;
 	margin-bottom: 13.5px;
 	text-align: center;
@@ -266,7 +266,7 @@ input:checked + label[for="text_format"] {
 /* ---- Newsletter Effect ---- */
 
 .filter2 {
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 .foot_wrap {
@@ -285,20 +285,49 @@ input:checked + label[for="text_format"] {
 		background-image: url('../img/rsz_coffee_background_large.jpg');        								/*##### Background image for the 768px width #####*/
 		background-repeat: no-repeat;
 		background-size: cover;
-		max-width: 1250px;
+		max-width: 820px;
 
 	}
 
-	.flex {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
+	.flex,
+	.margin {
+		margin: 0 15%;
 	}
 
 	.flex input,
 	.flex label,
 	.flex select {
-		width: 40%;
-		margin: 0;
+		flex: 1;
+		display: inline-block;
+		margin-bottom: 25px;
 	}
+
+	.contact_input_wrap {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.contact_input_wrap input,
+	.contact_input_wrap select {
+		flex: 2;
+	}
+
+	.padding {
+		font-size: 17px;
+	}
+
+	.contact_info {
+		padding-top: 25px;
+	}
+
+	.contact_input_wrap .zip_code {
+		flex: .8;
+		margin-right: 38%;
+	}
+
+	.orange {
+		padding-top: 35px;
+	}
+
 }
