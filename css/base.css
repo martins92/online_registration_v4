@@ -119,6 +119,12 @@ textarea {
 
 /* ---- Form ---- */
 
+input[placeholder="Required"]:valid {
+	background: #63e877;
+	color: #000;
+	transition: .6s;
+}
+
 .margin {
 	margin: auto 14.8px;
 }
@@ -216,6 +222,7 @@ input:checked + label[for="text_format"] {
 input:focus,
 textarea:focus {
 	background-color: rgba(255,255,255, .9);
+	transition: .6s;
 }
 
 .sign_up {																																			/*##### SIGN UP BUTTON #####*/
