@@ -213,6 +213,11 @@ input:checked + label[for="text_format"] {
 	background-position: -37px -134px;
 }
 
+input:focus,
+textarea:focus {
+	background-color: rgba(255,255,255, .9);
+}
+
 .sign_up {																																			/*##### SIGN UP BUTTON #####*/
 	width: 100%;
 	border: 0;
