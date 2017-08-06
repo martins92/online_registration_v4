@@ -9,10 +9,11 @@ body {
 	font-family: 'Roboto Slab', 'Playfair Display', 'PT Serif', serif;
 	background-image: url('../img/coffee_background.jpg');        								/*##### Background image for the 320px width #####*/
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	max-width: 500px;
+	margin: auto;
 	background-size: cover;
 	color: #fff;                                                                  /*##### Color #544337 #####*/
-	margin: 0;
+
 }
 
 h1,
@@ -25,11 +26,6 @@ fieldset {
 	margin: 0;
 	padding: 0;
 	border: none;
-}
-
-form {
-	max-width: 500px;
-	margin: auto;
 }
 
 footer {
@@ -75,13 +71,13 @@ textarea {
 	font-style: italic;
 	text-align: right;
 	font-family: 'Roboto Slab', 'Playfair Display', 'PT Serif', serif;
-	font-size: .65em;
+	font-size: .75em;
 	color: #7c7c7c;
 }
 
 [placeholder="Your interests"]::placeholder {
 	font-style: italic;
-	text-align: center;
+	text-align: left;
 	font-family: 'Roboto Slab', 'Playfair Display', 'PT Serif', serif;
 	font-size: 1em;
 	color: #7c7c7c;
@@ -117,6 +113,9 @@ textarea {
 	color: #ededed;
 }
 
+.orange {
+	background: rgba(254, 154, 88, 0.95)
+}
 
 /* ---- Form ---- */
 
@@ -231,22 +230,16 @@ input:checked + label[for="text_format"] {
 
 .sign_up:hover {
 	background: #fc8c4f;
-	transition: .9s;
+	transition: .3s;
 }
 
-input[type="button"]:active {
-	position: relative;
-	top: 1px;
+.sign_up:active {
+	background-color: #fc7b36;
+	box-shadow: inset 0 0 6px rgba(0,0,0, .25);
 }
+
 
 /* ---- Footer ---- */
-
-.foot_wrap {
-	display: inline-block;
-	width: 100%;
-	background: #383734;
-	opacity: .4;
-}
 
 .margin_f {
 	margin-top: 13.5px;
@@ -261,61 +254,25 @@ input[type="button"]:active {
 /* ---- Header Glass Effect ---- */
 
 .filter1 {
-	background: inherit;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-
-.filter1::before {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top: 0; right: 0; bottom: 0; left: 0;
-	background: inherit;
-	box-shadow: inset 0 0 3000px rgba(255, 255, 255,.8);
-	filter: blur(10px);
-	margin: -20px;
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
 /* ---- Contact Information Effect ---- */
 
 .contact_info {
-	background: inherit;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-
-.contact_info::before {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top: 0; right: 0; bottom: 0; left: 0;
-	background: inherit;
-	box-shadow: inset 0 0 3000px rgba(255, 255, 255,.4);
-	filter: blur(10px);
-	margin: -20px;
+	background-color: rgba(56, 55, 52, 0.5);
 }
 
 /* ---- Newsletter Effect ---- */
 
 .filter2 {
-	background: inherit;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
-.filter2::before {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top: 0; right: 0; bottom: 0; left: 0;
-	background: inherit;
-	box-shadow: inset 0 0 3000px rgba(255, 255, 255,1.1);
-	filter: blur(10px);
-	margin: -20px;
+.foot_wrap {
+	display: inline-block;
+	width: 100%;
+	background-color: rgba(56, 55, 52, 0.5);
 }
 
 /* =================================
@@ -324,4 +281,24 @@ input[type="button"]:active {
 
 @media (min-width: 768px) {
 
+	body {
+		background-image: url('../img/rsz_coffee_background_large.jpg');        								/*##### Background image for the 768px width #####*/
+		background-repeat: no-repeat;
+		background-size: cover;
+		max-width: 1250px;
+
+	}
+
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.flex input,
+	.flex label,
+	.flex select {
+		width: 40%;
+		margin: 0;
+	}
 }
